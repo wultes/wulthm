@@ -215,7 +215,42 @@ class WulthModel:
         right_list = self.merge_sort(nums[mid:])
 
         return self.merge(left_list, right_list)
+    
+    def find_max(self, nums: list):
+        """
+        Find max function
 
+        The maximum value is found by checking all the elements 
+        in the list and comparing them with the first element
+
+        Keyword arguments:
+        nums <list> - List of numbers
+        """
+        #Assume the first element of the list is the maximum value
+        max_num = nums[0]
+        for number in nums:
+            if number > max_num:
+                max_num = number
+        
+        return max_num
+    
+    def find_min(self, nums: list):
+        """
+        Find min function
+
+        The maximum value is found by checking all the elements
+         in the list and comparing them with the first element
+
+        Keyword arguments:
+        nums <list> - List of numbers
+        """
+        #Assume the first element of the list is the minimum value
+        min_num = nums[0]
+        for number in nums:
+            if number < min_num:
+                min_num = number
+        
+        return min_num
     
     def get_source_code(self, function_name: str):
         """
@@ -251,7 +286,7 @@ class WulthModel:
             print(func[0])
 
 
-    def test_sort_function(self, function_name: str, max_degree: int):
+    def test_function_with_list(self, function_name: str, max_degree: int):
         """
         For testing functions
 
@@ -290,7 +325,7 @@ class WulthModel:
             end_time = time.time()
             time_delta = (end_time - start_time) * 1000 
 
-            print(f"Job time: {time_delta}ms.")
+            print(f"Job time: {time_delta}ms.\n")
 
 wulthm = WulthModel()
 

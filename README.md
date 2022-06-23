@@ -1,5 +1,7 @@
 # Wulthm
 
+![Downloads from PiPy](https://img.shields.io/pypi/dm/wulthm) ![Version on Pipy](https://img.shields.io/pypi/v/wulthm) ![License by module](https://img.shields.io/github/license/wultes/wulthm)
+
 Сollection of algorithms in Python module 📚
 
 This module was created to view the work and implementation of popular methods in Python.
@@ -40,7 +42,7 @@ You can run tests by function:
 ```python
 from wulthm import wulthm
 
-wulthm.test_sort_function(
+wulthm.test_function_with_list(
     function_name="bubble_sort",
   	max_degree=2
 )
