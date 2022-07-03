@@ -252,6 +252,28 @@ class WulthModel:
         
         return min_num
     
+    def find_chr_index_in_str(self, string: str, chr: str):
+        """
+        Find char index in string
+
+        In Python, strings behave much like lists
+
+        Therefore, char has indices
+        
+        The function loops through the indexes of the string 
+        and finds the index of the char to be found
+
+        Keyword arguments:
+        string <str> - String where need find char
+        chr <str> - Char the index to be found
+        """
+        for index in len(string):
+            if string[index] == chr:
+                return index
+        
+        #If not found then return None
+        return None
+    
     def get_source_code(self, function_name: str):
         """
         For get source code of function
@@ -284,7 +306,6 @@ class WulthModel:
         functions = inspect.getmembers(self, predicate=inspect.ismethod)
         for func in functions:
             print(func[0])
-
 
     def test_function_with_list(self, function_name: str, max_degree: int):
         """
